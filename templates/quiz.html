@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Gestion Quiz</title>
+    <link rel="stylesheet" href="/static/css/flex.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Gestion des Quiz</h1>
+    </header>
+
+    <div id="main">
+      <nav id="nav1">
+        <h2>Liste des quiz</h2>
+        <button id="btnGetQuiz">Récupérer la liste des quiz</button>
+        <div id="quizList"></div>
+      </nav>
+
+      <article>
+        <h2>Créer / Modifier un questionnaire</h2>
+        <input type="text" id="newQuizName" placeholder="Nom du nouveau quiz"/>
+        <div id="toolsQuiz">
+          <img id="addQuiz" src="/static/img/new.png" alt="Ajouter un quiz" title="Ajouter un quiz"/>
+          <img id="delQuiz" src="/static/img/delete.png" alt="Effacer le formulaire quiz" title="Effacer le formulaire quiz"/>
+        </div>
+      </article>
+
+      <nav id="nav2">
+        <h2>Créer / Modifier une question</h2>
+        <label>Questionnaire ID : 
+          <input type="number" id="newQuestionQId"/>
+        </label><br/>
+        <label>Titre : 
+          <input type="text" id="newQuestionTitle"/>
+        </label><br/>
+        <label>Type :
+          <select id="newQuestionType">
+            <option value="open">Question ouverte</option>
+            <option value="multiple_choice">Question à choix multiple</option>
+          </select>
+        </label><br/>
+        <label>Réponse : 
+          <input type="text" id="newQuestionAnswer" placeholder="Réponse (facultatif)"/>
+        </label><br/>
+        <div id="toolsQuestion">
+          <img id="addQuestion" src="/static/img/new.png" alt="Ajouter une question" title="Ajouter une question"/>
+          <img id="delQuestion" src="/static/img/delete.png" alt="Effacer le formulaire question" title="Effacer le formulaire question"/>
+        </div>
+      </nav>
+    </div>
+
+    <div id="editSection" style="display: none; border: 1px solid #000; padding: 10px; margin: 10px;">
+      <h2>Modifier</h2>
+      <input type="hidden" id="editId" />
+      <label>Nom/Titre : <input type="text" id="editText"></label><br/>
+      <div id="editAnswerContainer">
+        <label>Réponse : <input type="text" id="editAnswer"></label><br/>
+      </div>
+      <button id="btnUpdate">Modifier</button>
+      <button id="btnCancelUpdate">Annuler</button>
+    </div>
+
+    <footer>
+      <h4>© IUT d'Orléans</h4>
+    </footer>
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/quiz.js"></script>
+  </body>
+</html>
