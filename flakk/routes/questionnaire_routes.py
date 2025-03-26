@@ -1,7 +1,7 @@
 # routes/questionnaire_routes.py
 from flask import Blueprint, request, jsonify, abort
 from .. import db
-from ..models import Questionnaire
+from ..flakk.models import Questionnaire
 
 bp_questionnaire = Blueprint('bp_questionnaire', __name__)
 

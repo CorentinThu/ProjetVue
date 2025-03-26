@@ -1,5 +1,5 @@
 # models.py
-from . import db
+from .. import db
 
 class Questionnaire(db.Model):
     __tablename__ = 'questionnaire'
